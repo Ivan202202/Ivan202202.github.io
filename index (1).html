@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Persönliches IT-Portfolio – Azure, Microsoft Entra ID und IT-Sicherheit.">
+  <title>Ivan | IT Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111c2e;
+      --panel2: #16243a;
+      --text: #edf3fb;
+      --muted: #a9b8cc;
+      --accent: #70b7ff;
+      --line: rgba(255,255,255,.12);
+      --max: 1060px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      color: var(--text); background: radial-gradient(ellipse at top right, #172d4c 0, var(--bg) 48%);
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
+    header { border-bottom: 1px solid var(--line); background: rgba(11,18,32,.82); position: sticky; top: 0; backdrop-filter: blur(12px); z-index: 5; }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:68px; }
+    .brand { color:var(--text); font-weight:750; letter-spacing:.03em; }
+    .links { display:flex; flex-wrap:wrap; gap:18px; font-size:.92rem; }
+    .links a { color:var(--muted); }
+    .hero { padding:82px 0 62px; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:750; }
+    h1 { font-size:clamp(2.4rem, 7vw, 5rem); line-height:1.04; letter-spacing:-.045em; margin:14px 0 20px; max-width:850px; }
+    .lead { color:var(--muted); font-size:clamp(1.05rem, 2.2vw, 1.25rem); max-width:740px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); padding:11px 17px; border-radius:12px; color:var(--text); font-weight:650; }
+    .btn.primary { background:var(--accent); color:#081321; border-color:var(--accent); }
+    section { padding:48px 0; }
+    .section-head { margin-bottom:24px; }
+    h2 { font-size:1.7rem; letter-spacing:-.025em; margin:0 0 8px; }
+    .section-head p, .muted { color:var(--muted); margin:0; }
+    .grid { display:grid; grid-template-columns:repeat( auto-fit, minmax(230px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(150deg, rgba(22,36,58,.92), rgba(17,28,46,.88)); border-radius:18px; padding:22px; }
+    .card h3 { margin:0 0 8px; font-size:1.08rem; }
+    .card p { margin:0; color:var(--muted); }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .tag { border:1px solid var(--line); border-radius:999px; padding:4px 10px; font-size:.82rem; color:#d7e5f7; background:rgba(255,255,255,.035); }
+    .timeline { border-left:1px solid var(--line); padding-left:20px; display:grid; gap:20px; }
+    .timeline-item { position:relative; }
+    .timeline-item:before { content:""; position:absolute; width:9px; height:9px; border-radius:50%; background:var(--accent); left:-25px; top:9px; }
+    .timeline-item h3 { margin:0 0 3px; }
+    .timeline-item p { margin:0; color:var(--muted); }
+    .notice { border:1px dashed rgba(112,183,255,.45); background:rgba(112,183,255,.06); border-radius:14px; padding:16px; color:var(--muted); }
+    footer { border-top:1px solid var(--line); padding:26px 0 38px; color:var(--muted); font-size:.9rem; }
+    @media (max-width:650px) {
+      nav { align-items:flex-start; flex-direction:column; padding:14px 0; }
+      .links { gap:12px; }
+      .hero { padding-top:56px; }
+      section { padding:36px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Hauptnavigation">
+        <a class="brand" href="#home">IVAN / IT PORTFOLIO</a>
+        <div class="links">
+          <a href="#profil">Profil</a>
+          <a href="#kompetenzen">Kompetenzen</a>
+          <a href="#zertifikate">Zertifikate</a>
+          <a href="#projekte">Projekte</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home">
+      <div class="eyebrow">IT · Cloud · Identity · Security</div>
+      <h1>Technologie verstehen.<br>Identitäten schützen.</h1>
+      <p class="lead">Ich entwickle mein technisches Profil im Bereich Microsoft Azure, Microsoft Entra ID und IT-Sicherheit weiter. Hier dokumentiere ich Kompetenzen, Zertifizierungen und praktische Lernprojekte.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projekte">Projekte ansehen</a>
+        <a class="btn" href="#kontakt">Kontakt</a>
+        <!-- CV-Link ergänzen, sobald die PDF im Repository liegt -->
+      </div>
+    </section>
+
+    <section class="wrap" id="profil">
+      <div class="section-head">
+        <h2>Profil</h2>
+        <p>Eine kurze professionelle Vorstellung.</p>
+      </div>
+      <div class="card">
+        <p>Ich beschäftige mich mit Cloud-Technologien, Identitäts- und Zugriffsmanagement sowie Sicherheitskonzepten im Microsoft-Umfeld. Mein Fokus liegt auf nachvollziehbaren Lösungen, sauberer Dokumentation und kontinuierlichem praktischem Lernen.</p>
+        <p style="margin-top:12px">Diese Website wird schrittweise um konkrete Projekte, technische Dokumentationen und weitere berufliche Informationen ergänzt.</p>
+      </div>
+    </section>
+
+    <section class="wrap" id="kompetenzen">
+      <div class="section-head">
+        <h2>Technische Kompetenzen</h2>
+        <p>Schwerpunkte und Themen, die ich weiter vertiefe.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Microsoft Azure</h3>
+          <p>Cloud-Grundlagen, Azure-Administration und sichere Konfiguration von Ressourcen.</p>
+          <div class="tags"><span class="tag">Azure</span><span class="tag">Administration</span></div>
+        </article>
+        <article class="card">
+          <h3>Identity & Access</h3>
+          <p>Identitäten, Zugriffssteuerung und Schutz von Benutzerkonten im Microsoft-Umfeld.</p>
+          <div class="tags"><span class="tag">Entra ID</span><span class="tag">MFA</span><span class="tag">Conditional Access</span></div>
+        </article>
+        <article class="card">
+          <h3>IT Security</h3>
+          <p>Sicherheitsprinzipien, Zero-Trust-Ansätze und strukturierte Risiko-Reduktion.</p>
+          <div class="tags"><span class="tag">Zero Trust</span><span class="tag">Security</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="zertifikate">
+      <div class="section-head">
+        <h2>Zertifizierungen</h2>
+        <p>Microsoft-Zertifizierungen.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>AZ-104</h3><p>Microsoft Azure Administrator</p></article>
+        <article class="card"><h3>AZ-500</h3><p>Microsoft Azure Security Technologies</p></article>
+        <article class="card"><h3>SC-300</h3><p>Microsoft Identity and Access Administrator</p></article>
+      </div>
+      <p class="muted" style="margin-top:14px">Zertifikatslinks oder Credly-Badges können hier ergänzt werden.</p>
+    </section>
+
+    <section class="wrap" id="projekte">
+      <div class="section-head">
+        <h2>Praktische Projekte</h2>
+        <p>Hier werden technische Arbeiten mit Ziel, Umsetzung und Ergebnissen dokumentiert.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Conditional Access Lab</h3>
+          <p>Dokumentation eines Lernprojekts zu Conditional-Access-Richtlinien, MFA und Test-Szenarien.</p>
+          <div class="tags"><span class="tag">Entra ID</span><span class="tag">MFA</span></div>
+          <p style="margin-top:14px"><span class="muted">Projektstatus: geplant</span></p>
+        </article>
+        <article class="card">
+          <h3>Azure Security Lab</h3>
+          <p>Praktische Übungen zu sicheren Azure-Konfigurationen und grundlegenden Sicherheitskontrollen.</p>
+          <div class="tags"><span class="tag">Azure</span><span class="tag">Security</span></div>
+          <p style="margin-top:14px"><span class="muted">Projektstatus: geplant</span></p>
+        </article>
+        <article class="card">
+          <h3>Technische Dokumentation</h3>
+          <p>Schritt-für-Schritt-Anleitungen, Architekturübersichten und Lessons Learned aus Labs.</p>
+          <div class="tags"><span class="tag">Dokumentation</span><span class="tag">GitHub</span></div>
+          <p style="margin-top:14px"><span class="muted">Projektstatus: geplant</span></p>
+        </article>
+      </div>
+      <div class="notice" style="margin-top:18px">Hinweis: Die Projektkarten sind zunächst Platzhalter. Veröffentliche ein Projekt erst, wenn die Beschreibung deine tatsächlich durchgeführten Arbeiten korrekt wiedergibt.</div>
+    </section>
+
+    <section class="wrap" id="kontakt">
+      <div class="section-head">
+        <h2>Kontakt</h2>
+        <p>Für berufliche Anfragen.</p>
+      </div>
+      <div class="card">
+        <p>LinkedIn: <a href="#" aria-label="LinkedIn-Link noch ergänzen">Profil-Link ergänzen</a></p>
+        <p style="margin-top:8px">E-Mail: <span class="muted">E-Mail-Adresse ergänzen</span></p>
+        <p class="muted" style="margin-top:12px">Bitte nur Kontaktdaten veröffentlichen, die öffentlich zugänglich sein sollen.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Ivan · Persönliches IT-Portfolio</div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
